@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern SaaS utility classes and common patterns */
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-sm;
+  }
+  .glass-hover {
+    @apply hover:bg-slate-50/80 hover:border-slate-300 transition-all duration-200;
+  }
+  .glass-card {
+    @apply bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+  .gradient-bg {
+    @apply bg-gradient-to-r from-brand-600 to-indigo-600 text-white;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm
+           bg-brand-600 text-white shadow-sm
+           hover:bg-brand-700 hover:shadow
+           active:scale-[0.98] transition-all duration-200;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm
+           bg-white text-slate-700 border border-slate-200 shadow-sm
+           hover:bg-slate-50 hover:border-slate-300
+           active:scale-[0.98] transition-all duration-200;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm
+           bg-rose-50 text-rose-600 border border-rose-200
+           hover:bg-rose-100 hover:border-rose-300
+           active:scale-[0.98] transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-900
+           placeholder:text-slate-400 outline-none
+           focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20
+           transition-all duration-200 shadow-sm;
+  }
+  .badge-emerald {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold
+           bg-emerald-50 text-emerald-700 border border-emerald-200/80;
+  }
+  .badge-blue {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold
+           bg-sky-50 text-sky-700 border border-sky-200/80;
+  }
+  .badge-amber {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold
+           bg-amber-50 text-amber-700 border border-amber-200/80;
+  }
+  .badge-rose {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold
+           bg-rose-50 text-rose-700 border border-rose-200/80;
+  }
+  .badge-purple {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold
+           bg-purple-50 text-purple-700 border border-purple-200/80;
+  }
+}
+
+/* Material Symbols alignment */
+.material-symbols-outlined {
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* Box-sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar — theme neutral */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.45);
+}

@@ -1,0 +1,31 @@
+{
+  "changes_required": "1. Verify and fix the RiskSignals component's data fetching logic to properly call API functions\n2. Ensure the API client exports all necessary risk signal functions that the component expects\n3. Fix any mismatches between component expectations and API return formats\n4. Ensure proper error handling and loading states in the RiskSignals component\n5. Verify the signal data structure matches what the UI components expect",
+  "current_state": "The RiskSignals component exists at src/components/RiskSignals.jsx and is properly routed in src/App.jsx at /alerts. The API client (src/services/apiClient.js) contains the risk signal engine with functions for signal detection, severity configuration, and signal management. The component imports the api client and has UI components for severity badges, status badges, signal type labels, change indicators, and a detail panel. However, there may be issues with data fetching or the API function signatures not matching what the component expects.",
+  "objective": "Complete the Risk Signals implementation by ensuring the component properly fetches and displays data from the API. Verify that the risk signal engine functions are correctly wired to the UI, fix any data flow issues, and ensure the Alerts page displays risk signals with proper filtering, severity badges, and status indicators.",
+  "tasks": [
+    {
+      "action": "edit",
+      "description": "Fix data fetching logic - ensure component properly calls api.getRiskSignals() or equivalent function on mount, handle loading and error states, and map the returned data to the component's expected format",
+      "file": "src/components/RiskSignals.jsx",
+      "task_id": 1
+    },
+    {
+      "action": "edit",
+      "description": "Add or fix the getRiskSignals() API function that returns the SEED_RISK_SIGNALS data with proper filtering support (by status, severity, caseId), and ensure all signal management functions (acknowledge, resolve, dismiss) are properly exported",
+      "file": "src/services/apiClient.js",
+      "task_id": 2
+    },
+    {
+      "action": "edit",
+      "description": "Fix any remaining UI issues in the RiskSignals component - ensure SignalDetailPanel receives proper signal data, fix the truncated code at line 351, and verify all event handlers (onAcknowledge, onResolve, onDismiss) properly call API functions",
+      "file": "src/components/RiskSignals.jsx",
+      "task_id": 3
+    },
+    {
+      "action": "verify",
+      "description": "Run install_and_build to verify the application builds successfully and the Risk Signals page displays data correctly",
+      "file": "build_verification",
+      "task_id": 4
+    }
+  ]
+}

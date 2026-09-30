@@ -1,0 +1,43 @@
+{
+  "title": "Application Prototype",
+  "target_users": [
+    "Business Users",
+    "Operators"
+  ],
+  "architecture_tier": "FULLSTACK",
+  "entities": {
+    "Contact": [
+      "id",
+      "name",
+      "company",
+      "email",
+      "phone",
+      "status"
+    ],
+    "Deal": [
+      "id",
+      "title",
+      "contactId",
+      "value",
+      "stage",
+      "expectedCloseDate"
+    ],
+    "Activity": [
+      "id",
+      "dealId",
+      "type",
+      "description",
+      "dueDate"
+    ]
+  },
+  "workflows": [
+    "View primary dashboard",
+    "Filter and search records",
+    "Create and update entries"
+  ],
+  "active_features": [
+    "Interactive Dashboard",
+    "Realistic Seed Data",
+    "Filter & Search Engine"
+  ]
+}
